@@ -5,13 +5,31 @@
         <title>KafkUber</title>
         <meta name="description" content="Apache Kafka demostration with a ride hailing service" />
         <link rel="stylesheet" href="css/styles.css" />
+        <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
         <script src="https://api.mapbox.com/mapbox-gl-js/v1.8.0/mapbox-gl.js"></script>
         <link href="https://api.mapbox.com/mapbox-gl-js/v1.8.0/mapbox-gl.css" rel="stylesheet" />
+        <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" /> -->
     </head>
     <body>
-        <div id="map"></div>
-        <pre id="coordinates" class="coordinates"></pre>
+        <div class="row">
+            <div class="column left">
+                <h1>Drivers</h1>
+                <div class="drivers"></div>
+                <button type="button" class="spawn-driver">Spawn Driver</button>
+            </div>
 
-        <script src="js/scripts.js"></script>
+            <div class="column middle">
+                <div id="map"></div>
+                <pre id="coordinates" class="coordinates"></pre>
+            </div>
+
+            <div class="column right">
+                <h1>Riders</h1>
+                <div class="riders"></div>
+                <button type="button" class="spawn-driver">Spawn Rider</button>
+            </div>
+        </div>
+
+        <script src="js/scripts-private.js"></script>
     </body>
 </html>
