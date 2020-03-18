@@ -1,11 +1,13 @@
 * {
     box-sizing: border-box;
+    overflow: hidden;
 }
 
 body {
     margin: 0;
     padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-family: Courier New, Courier, Lucida Sans Typewriter, Lucida Typewriter, monospace;
 }
 
 #map {
@@ -20,7 +22,7 @@ body {
     background: rgba(0, 0, 0, 0.5);
     color: #fff;
     position: absolute;
-    bottom: 40px;
+    top: 0px;
     left: 15% + 10px;
     padding: 5px 10px;
     margin: 0;
@@ -55,19 +57,50 @@ h1 {
 .drivers {
     margin: 10px 15px;
     height: 80vh;
-    background-color: #fff;
 }
 
 button {
+    font-family: Courier New, Courier, Lucida Sans Typewriter, Lucida Typewriter, monospace;
+    font-size: 18px;
+    font-weight: bold;
     padding: 10px;
     width: 75%;
     margin: 40px auto;
     display: block;
-    border: 3px solid #28969e;
+    border: 2px solid #28969e;
     border-radius: 3px;
+    background-color: #ccc;
 }
 
 button:hover {
     background-color: #28969e;
     color: white;
+}
+
+.driver-icon {
+    background-image: url("/static/images/car-11.png");
+    background-size: cover;
+    width: 30px;
+    height: 22px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.card {
+    color: #fff;
+    font-size: 14px;
+    font-family: Courier New, Courier, Lucida Sans Typewriter, Lucida Typewriter, monospace;
+    margin: 3px;
+    padding: 8px;
+    border: 2px solid #28969e;
+    border-radius: 3px;
+}
+
+.card h3 {
+    margin: 2px;
+}
+
+.card p {
+    margin: 1px;
+    word-wrap: break-word;
 }

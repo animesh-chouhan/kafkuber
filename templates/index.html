@@ -4,6 +4,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <title>KafkUber</title>
         <meta name="description" content="Apache Kafka demostration with a ride hailing service" />
+        <link rel="shortcut icon" type="image/png" href="static/images/favicon.png" />
         <link rel="stylesheet" href="static/css/styles.css" />
         <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
         <script src="https://api.mapbox.com/mapbox-gl-js/v1.8.0/mapbox-gl.js"></script>
@@ -11,6 +12,12 @@
         <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" /> -->
     </head>
     <body>
+        <!-- <nav class="navigation-bar">
+            <img class="logo" href="static/images/favicon.png" />
+            <ul>
+                <li>KafkUber</li>
+            </ul>
+        </nav> -->
         <div class="row">
             <div class="column left">
                 <h1>Drivers</h1>
@@ -19,6 +26,8 @@
             </div>
 
             <div class="column middle">
+                <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.0.2/mapbox-gl-directions.js"></script>
+                <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.0.2/mapbox-gl-directions.css" type="text/css" />
                 <div id="map"></div>
                 <pre id="coordinates" class="coordinates"></pre>
             </div>
@@ -26,7 +35,7 @@
             <div class="column right">
                 <h1>Riders</h1>
                 <div class="riders"></div>
-                <button type="button" class="spawn-driver">Spawn Rider</button>
+                <button type="button" class="spawn-rider">Spawn Rider</button>
             </div>
         </div>
 
