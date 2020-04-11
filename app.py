@@ -1,9 +1,10 @@
 
 import json
 import random
-from flask import Flask, jsonify, render_template, request
 import src.rider as rdr
 import src.driver as drvr
+from geopy.distance import geodesic
+from flask import Flask, jsonify, render_template, request
 
 
 app = Flask(__name__)
@@ -47,5 +48,26 @@ def spawn_rider():
             return json.dumps({"error": "This rider id is taken."})
 
 
+@app.route("/matchmaker", methods=["GET"])
+def match_maker():
+    for driver in drivers:
+        if driver.driver_assigned == False:
+            min_dist = float("inf")
+            min_rider_id = None
+            for rider in riders:
+                if rider.rider_assigned == False:
+                    dist = geodesic((driver.driver_latitude, driver.driver_longitude),
+                                    (rider.rider_latitude, rider.rider_longitude)).miles
+                    if dist < min_dist:
+                        min_dist = dist
+                        min_rider_id = rider.rider_id
+
+            if min_rider_id != None:
+                driver.driver_assigned = True
+                driver.driver_assigned_to = min_rider_id
+
+    return json.dumps([driver.__repr__() for driver in drivers])
+
+
 if __name__ == '__main__':
-    app.run(host="127.0.0.1", port="8080", debug=True)
+    app.run(host="127.0.0.1", port="8000", debug=True)

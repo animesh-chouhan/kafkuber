@@ -34,7 +34,7 @@ body {
 
 .column {
     float: left;
-    height: 100vh;
+    height: 91vh;
 }
 
 .left,
@@ -43,6 +43,7 @@ body {
     background-color: #333;
     color: #ddd;
     border: 3px solid #191a1a;
+    border-bottom: 0px;
 }
 
 .middle {
@@ -56,7 +57,7 @@ h1 {
 .riders,
 .drivers {
     margin: 10px 15px;
-    height: 80vh;
+    height: 72vh;
 }
 
 button {
@@ -69,7 +70,7 @@ button {
     display: block;
     border: 2px solid #28969e;
     border-radius: 3px;
-    background-color: #ccc;
+    background-color: #ddd;
 }
 
 button:hover {
@@ -78,18 +79,25 @@ button:hover {
 }
 
 .driver-icon {
-    background-image: url("/static/images/car-11.png");
+    background-image: url("/static/images/car-512.png");
     background-size: cover;
-    width: 30px;
-    height: 22px;
-    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+}
+
+.rider-icon {
+    background-image: url("/static/images/rider-512.png");
+    background-size: cover;
+    width: 32px;
+    height: 32px;
     cursor: pointer;
 }
 
 .card {
     color: #fff;
-    font-size: 14px;
-    font-family: Courier New, Courier, Lucida Sans Typewriter, Lucida Typewriter, monospace;
+    font-size: 11px;
+    font-family: "Courier New", Courier, monospace;
     margin: 3px;
     padding: 8px;
     border: 2px solid #28969e;
@@ -103,4 +111,18 @@ button:hover {
 .card p {
     margin: 1px;
     word-wrap: break-word;
+}
+
+.console {
+    padding: 4px;
+    font-size: 12px;
+    font-family: "Courier New", Courier, monospace;
+    background-color: #333;
+    color: #ddd;
+    border: 3px solid #191a1a;
+}
+
+.console .feed {
+    color: #24ee3e;
+    height: 6.3vh;
 }

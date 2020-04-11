@@ -3,6 +3,7 @@ import json
 
 class Rider:
     def __init__(self, rider_id, rider_name, rider_assigned, rider_assigned_to, rider_latitude, rider_longitude):
+        """Initialize the rider."""
         self.rider_id = rider_id
         self.rider_name = rider_name
         self.rider_assigned = rider_assigned

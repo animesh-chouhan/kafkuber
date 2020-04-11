@@ -3,6 +3,7 @@ import json
 
 class Driver:
     def __init__(self, driver_id, driver_name, driver_assigned, driver_assigned_to, driver_latitude, driver_longitude):
+        """Initialize the driver."""
         self.driver_id = driver_id
         self.driver_name = driver_name
         self.driver_assigned = driver_assigned
